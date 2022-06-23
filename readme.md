@@ -23,7 +23,7 @@ It it not recommended to use this as a site-wide theme.
 - Dock
 - Footer
 - Breadcrumbs
-- Notifications
+- Plugin outputs (e.g. Notifications popover)
 
 ## Settings
 
@@ -31,7 +31,7 @@ It it not recommended to use this as a site-wide theme.
 - Custom text for the header/logo (instead of the site name)
 - Custom logo for the header (instead of the small site logo, if set)
 - Custom SCSS and presets (similar to Boost)
-- Custom html (raw) in the navbar area (perhaps for a custom menu, links, etc)
+- Custom html (raw) in the right navbar area (perhaps for a custom menu, links, etc)
 
 ## Licence
 
