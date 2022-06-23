@@ -34,7 +34,7 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 $string['privacy:metadata'] = 'The Arid theme plugin does not store any personal data.';
 
-$string['headerhtml_desc'] = 'Custom HTML to be added to the header of the page (raw).';
+$string['headerhtml_desc'] = 'Custom HTML to be added to the header of the page (raw). Moodle uses Bootstrap 4.4, so any code based on that will work well (see <a href="https://getbootstrap.com/docs/4.4/examples/">https://getbootstrap.com/docs/4.4/examples/</a> for examples).';
 $string['headerhtml'] = 'Custom HTML';
 $string['headerlogo'] = 'Custom logo, overrides site logo or header label if set';
 $string['headerlabel'] = 'Label, instead of the logo or sitename';
