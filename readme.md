@@ -4,6 +4,8 @@ This theme extends Boost and is desgined for use in courses or categories where 
 
 It it not recommended to use this as a site-wide theme.
 
+![screenshot](pix/screenshot.jpg)
+
 ## Features
 
 - Single column design
