@@ -1,0 +1,13 @@
+#page-footer {
+    background-color: $footer-background;
+    color: #999999;
+    a {
+        color: $avant-blue;
+        .icon {
+            color: inherit;
+        }
+    }
+    .helplink .icon {
+        margin-left: 0;
+    }
+}

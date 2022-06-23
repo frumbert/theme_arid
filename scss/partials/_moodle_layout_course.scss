@@ -1,0 +1,20 @@
+body.pagelayout-course {
+	.context-header-settings-menu {
+		position: absolute;
+		top: 20px;
+    	right: 18px;
+	}
+    .section {
+	    .label {
+	        .mod-indent-outer {
+	            padding-left: 0;
+	        }
+	    }
+	}
+	.section .activity .editing_move {
+	    left: -24px;
+	}
+	.section .activity .mod-indent-outer {
+		width: 100%;
+	}
+}
