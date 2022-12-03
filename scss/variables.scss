@@ -1,10 +1,36 @@
+/*** Our variables ***/
+
 $avant-blue: #0055a2;
 $navbar-height: 70px;
-
 $line-color: #fff;
+
+/*** Colours ***/
+$cgs-light-blue: #66a8d8;
+$cgs-dark-blue: #005892;
+
+$footer-background: #ebebeb;
+
+$avant-blue: #0055a2; //  hsl(220, 100%, 60%); // at 60%, 90% and 98%
+$block-border: rgba(0, 0, 0, 0.125);
+
+$light-blue: #CBE4FA;
+$dark-blue: #004D94;
+$light-grey: #EBEBEB;
+$dark-grey:#DDDDDD;
+
+$tab-border: $block-border;
+$tab-dark: $light-grey;
+$tab-light: $light-blue;
+
+/*** Display sizing & thresholds ***/
+$navbar-height: 70px;
+$show-custom-menu-width: 1350px;
+$show-cgs-connect-width: 1000px;
+$show-expanded-search-width: 750px;
+$force-expanded-search-width: 1110px;
+$expand-right-bg-width: 500px;
 
 /*** Fonts ***/
 $font-family-sans-serif: "Open Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
 $font-family-base: $font-family-sans-serif;

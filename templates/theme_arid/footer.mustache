@@ -18,6 +18,7 @@
     Page footer.
 }}
 <footer id="page-footer" class="py-4 px-5">
-    {{{ output.standard_footer_html }}}
-    {{{ output.standard_end_of_body_html }}}
+    <div data-name='arid-custom-html'>{{{ footer.html }}}</div>
+    <div data-name='standard_footer_html'>{{{ output.standard_footer_html }}}</div>
+    <div data-name='standard_endofbody_html'>{{{ output.standard_end_of_body_html }}}</div>
 </footer>

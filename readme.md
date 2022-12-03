@@ -1,8 +1,8 @@
 # Arid Theme
 
-This theme extends Boost and is desgined for use in courses or categories where you want to show generic single-column page information and don't want to show most Moodle site features, such as Single Activity courses.
+This theme extends Boost and is desgined for use in courses or categories where you want to show generic single-column page information and don't want to show most Moodle site features, such as when using Single Activity courses to display static pages or surveys.
 
-It it not recommended to use this as a site-wide theme.
+It it not recommended to use this as a site-wide theme. Enable course/category theme support and apply it there only.
 
 ![screenshot](pix/screenshot.jpg)
 
@@ -34,6 +34,7 @@ It it not recommended to use this as a site-wide theme.
 - Custom logo for the header (instead of the small site logo, if set)
 - Custom SCSS and presets (similar to Boost)
 - Custom html (raw) in the right navbar area (perhaps for a custom menu, links, etc)
+- Custom html (raw) in the footer
 
 ## Licence
 

@@ -25,17 +25,27 @@ defined('MOODLE_INTERNAL') || die();
 $string['choosereadme'] = 'This theme extends Boost and is desgined for use in courses or categories where you want to show generic single-column page information and don\'t want to show most Moodle site features, such as Single Activity courses. It it not recommended to use this as a site-wide theme.';
 $string['configtitle'] = 'Arid settings';
 $string['generalsettings'] = 'Common settings';
-$string['scsssettings'] = 'CSS/SCSS';
+$string['scsssettings'] = 'CSS/SCSS/JS';
 $string['advancedsettings'] = 'Less used settings';
 $string['pluginname'] = 'Arid';
 $string['rawscss'] = 'Raw SCSS';
 $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
 $string['rawscsspre'] = 'Raw initial SCSS';
+$string['rawjs'] = 'Page javascript';
+$string['rawjs_desc'] = 'In addition to Additional HTML, you can add javascript there that will be executed before BODY close in this theme only';
+
+$string['fixedwidth'] = 'Fixed-width container?';
+$string['fixedwidth_desc'] = 'Use a fixed width container (default: container-fluid)';
+
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 $string['privacy:metadata'] = 'The Arid theme plugin does not store any personal data.';
 
 $string['headerhtml_desc'] = 'Custom HTML to be added to the header of the page (raw). Moodle uses Bootstrap 4.4, so any code based on that will work well (see <a href="https://getbootstrap.com/docs/4.4/examples/">https://getbootstrap.com/docs/4.4/examples/</a> for examples).';
-$string['headerhtml'] = 'Custom HTML';
+$string['headerhtml'] = 'Header HTML';
+
+$string['footerhtml_desc'] = 'Custom HTML to be added to the footer of the page (raw). Moodle uses Bootstrap 4.4, so any code based on that will work well (see <a href="https://getbootstrap.com/docs/4.4/examples/">https://getbootstrap.com/docs/4.4/examples/</a> for examples).';
+$string['footerhtml'] = 'Footer HTML';
+
 $string['headerlogo'] = 'Custom logo, overrides site logo or header label if set';
 $string['headerlabel'] = 'Label, instead of the logo or sitename';
 $string['headerlink'] = 'URL for logo, instead of the webroot';
