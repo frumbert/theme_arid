@@ -77,3 +77,17 @@ function theme_arid_pluginfile($course, $cm, $context, $filearea, $args, $forced
         send_file_not_found();
     }
 }
+
+function theme_arid_get_extra_scss($theme) {
+    return !empty($theme->settings->scss) ? $theme->settings->scss : '';
+}
+
+function theme_arid_get_pre_scss($theme) {
+    return !empty($theme->settings->scsspre) ? $theme->settings->scsspre : '';
+}
+
+function theme_arid_get_precompiled_css($theme) {
+    global $CFG;
+    $file = $CFG->dirroot . '/theme/arid/style/style.css';
+    return file_exists($file) ? file_get_contents($file) : '';
+}

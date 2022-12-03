@@ -24,6 +24,7 @@ defined('MOODLE_INTERNAL') || die();
 $THEME->name = 'arid';
 $THEME->sheets = [];
 $THEME->editor_sheets = [];
+$THEME->editor_scss = ['editor'];
 $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
 $THEME->yuicssmodules = array();
@@ -34,6 +35,12 @@ $THEME->hidefromselector = false;
 $THEME->scss = function($theme) {
     return theme_arid_get_main_scss_content($theme);
 };
+
+$THEME->extrascsscallback = 'theme_arid_get_extra_scss';
+$THEME->prescsscallback = 'theme_arid_get_pre_scss';
+$THEME->precompiledcsscallback = 'theme_arid_get_precompiled_css';
+
+
 $THEME->layouts = [
     'base' => array(
         'file' => 'arid.php',
@@ -46,6 +53,7 @@ $THEME->layouts = [
     'course' => array(
         'file' => 'arid.php',
         'regions' => array(),
+        'options' => array('nonavbar' => false),
     ),
     'coursecategory' => array(
         'file' => 'arid.php',
@@ -54,5 +62,6 @@ $THEME->layouts = [
     'incourse' => array(
         'file' => 'arid.php',
         'regions' => array(),
+        'options' => array('nonavbar' => false),
     ),
 ];
