@@ -29,15 +29,24 @@ require_once($CFG->libdir . '/behat/lib.php');
 $theme = \theme_config::load('arid');
 
 $extraclasses = [];
+$extraclasses[] = 'theme-'.$theme->name;
+if (is_siteadmin()) { // || editing role
+    $extraclasses[] = 'editor';
+}
+
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $nav = $PAGE->flatnav;
 $sitename = format_string($SITE->shortname, true, ['context' => \context_course::instance(SITEID), "escape" => false]);
 $headerObj = new \stdClass();
-$headerObj->link = $theme->settings->headerLink ?: $CFG->wwwroot;
-$headerObj->label = $theme->settings->headerLabel ?: $sitename;
-$headerObj->html = $theme->settings->headerHtml ?: false;
-if ($theme->settings->headerLogo) {
+$headerObj->link = $theme->settings->headerLink ?? $CFG->wwwroot;
+$headerObj->label = $theme->settings->headerLabel ?? $sitename;
+$headerObj->html = $theme->settings->headerHtml ?? false;
+
+$footerObj = new \stdClass();
+$footerObj->html = $theme->settings->footerHtml ?? false;
+
+if (!empty($theme->settings->headerLogo)) {
     $headerObj->logo = true;
     $headerObj->logourl = \moodle_url::make_pluginfile_url(
                             \context_system::instance()->id,
@@ -55,6 +64,7 @@ $templatecontext = [
     'sitename' => $sitename,
     'output' => $OUTPUT,
     'header' => $headerObj,
+    'footer' => $footerObj,
     'bodyattributes' => $bodyattributes,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
@@ -62,6 +72,9 @@ $templatecontext = [
     'is_admin' => is_siteadmin(),
     'flatnavigation' => $nav,
     'firstcollectionlabel' => $nav->get_collectionlabel(),
+    'javascript' => !empty($theme->settings->js) ? $theme->settings->js : '',
+    'containerclass' => intval($theme->settings->fixedwidth) === 1 ? 'container' : 'container-fluid',
+    // debug 'settings' => print_r($theme->settings, true)
 ];
 
 echo $OUTPUT->render_from_template('theme_arid/arid', $templatecontext);

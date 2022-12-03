@@ -52,6 +52,13 @@ if ($ADMIN->fulltree) {
     // CSS related settings
     $page = new admin_settingpage('theme_arid_scss', get_string('scsssettings', 'theme_arid'));
 
+        // Custom footer HTML.
+        $name = 'theme_arid/fixedwidth';
+        $title = get_string('fixedwidth', 'theme_arid');
+        $desc = get_string('fixedwidth_desc', 'theme_arid');
+        $setting = new admin_setting_configcheckbox($name, $title, $desc, 0, 1, 0);
+        $page->add($setting);
+
         // Replicate the preset setting from boost; allow us to specify our own preset files.
         $name = 'theme_arid/preset';
         $title = get_string('preset', 'theme_boost');
@@ -81,6 +88,12 @@ if ($ADMIN->fulltree) {
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
+        // PAGE JS
+        $setting = new admin_setting_configtextarea('theme_arid/js', get_string('rawjs', 'theme_arid'),
+            get_string('rawjs_desc', 'theme_arid'), '', PARAM_RAW);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $page->add($setting);
+
     $settings->add($page);
 
     // Advanced settings.
@@ -92,6 +105,15 @@ if ($ADMIN->fulltree) {
         $desc = get_string('headerhtml_desc', 'theme_arid');
         $setting = new admin_setting_configtextarea($name, $title, $desc, '', PARAM_RAW);
         $page->add($setting);
+
+        // Custom footer HTML.
+        $name = 'theme_arid/footerHtml';
+        $title = get_string('footerhtml', 'theme_arid');
+        $desc = get_string('footerhtml_desc', 'theme_arid');
+        $setting = new admin_setting_configtextarea($name, $title, $desc, '', PARAM_RAW);
+        $page->add($setting);
+
+
 
     $settings->add($page);
 }
