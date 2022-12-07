@@ -77,13 +77,13 @@ if ($ADMIN->fulltree) {
         $page->add($setting);
 
         // PRE SCSS
-        $setting = new admin_setting_configtextarea('theme_arid/scsspre',
+        $setting = new admin_setting_scsscode('theme_arid/scsspre',
             get_string('rawscsspre', 'theme_arid'), get_string('rawscsspre_desc', 'theme_arid'), '', PARAM_RAW);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);
 
         // POST SCSS
-        $setting = new admin_setting_configtextarea('theme_arid/scss', get_string('rawscss', 'theme_arid'),
+        $setting = new admin_setting_scsscode('theme_arid/scss', get_string('rawscss', 'theme_arid'),
             get_string('rawscss_desc', 'theme_arid'), '', PARAM_RAW);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $page->add($setting);

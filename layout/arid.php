@@ -30,7 +30,7 @@ $theme = \theme_config::load('arid');
 
 $extraclasses = [];
 $extraclasses[] = 'theme-'.$theme->name;
-if (is_siteadmin()) { // || editing role
+if (is_siteadmin()) { // TODO || editing role
     $extraclasses[] = 'editor';
 }
 
@@ -73,7 +73,7 @@ $templatecontext = [
     'flatnavigation' => $nav,
     'firstcollectionlabel' => $nav->get_collectionlabel(),
     'javascript' => !empty($theme->settings->js) ? $theme->settings->js : '',
-    'containerclass' => intval($theme->settings->fixedwidth) === 1 ? 'container' : 'container-fluid',
+    'containerclass' => (intval($theme->settings->fixedwidth) === 1 ? 'container' : 'container-fluid'),
     // debug 'settings' => print_r($theme->settings, true)
 ];
 
